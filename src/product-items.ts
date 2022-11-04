@@ -9,11 +9,6 @@ export class ProductItems {
       id: 2,
       name: "baz",
       price: 33.99,
-    },
-    {
-      id: 3,
-      name: "nono",
-      price: 44.99,
-    },
+    }
   ];
 }
