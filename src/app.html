@@ -1,6 +1,14 @@
 <template>
   <h6>${message}</h6>
   <require from="./product-items"></require>
-<product-items></product-items>
+  <nav class="navbar bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" click.trigger="setActiveView('product')">Products</a>
+      <button class="btn" type="button" click.trigger="setActiveView('basket')">
+        Basket
+      </button>
+    </div>
+  </nav>
+  <product-items if.bind="activeView==='products'"></product-items>
+  <div if.bind="activeView==='basket'">Basket</div>
 </template>
-

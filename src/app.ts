@@ -1,4 +1,7 @@
+type view = "products" | "basket";
 export class App {
-  public message = "Hello World!";
-  public messagea = "Hi!";
+  activeView: view = "products";
+  setActiveView(view: view) {
+    this.activeView = view;
+  }
 }
