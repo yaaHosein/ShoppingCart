@@ -1,7 +1,7 @@
-type view = "products" | "basket";
+type View = "products" | "basket";
 export class App {
-  activeView: view = "products";
-  setActiveView(view: view) {
+  activeView: View = "products";
+  setActiveView(view: View) {
     this.activeView = view;
   }
 }
