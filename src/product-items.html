@@ -1,17 +1,20 @@
 <template>
-<div class="container">
+  <div class="container">
     <!--Content here-->
     <div class="card">
-        <div class="card-header">
-            <h3>Products</h3>
-        </div>
-        <div class="card-body">
+      <div class="card-header">
+        <h3>Products</h3>
+      </div>
+      <div class="card-body">
         <ul class="list-group">
-            <li repeat.for="product of products" class="list-group-item">
-                ${product.name}<span class="badge bg-primary rounded-pill"> price: ${product.price}</span>
-        </li>
+          <li repeat.for="product of products" class="list-group-item">
+            ${product.name}<span class="badge bg-primary rounded-pill">
+              price: ${product.price}</span
+            >
+            <button click.trigger="addToBasket(product)">Add to basket</button>
+          </li>
         </ul>
+      </div>
     </div>
-    </div>
-    </div>
+  </div>
 </template>

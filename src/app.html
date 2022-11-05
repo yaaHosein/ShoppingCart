@@ -1,5 +1,6 @@
 <template>
   <require from="./product-items"></require>
+  <require from="./basket"></require>
   <nav class="navbar bg-light">
     <div class="container-fluid">
       <a class="navbar-brand" click.trigger="setActiveView('products')">Products</a>
@@ -9,5 +10,6 @@
     </div>
   </nav>
   <product-items if.bind="activeView==='products'"></product-items>
-  <div if.bind="activeView==='basket'">Basket</div>
+  <basket if.bind="activeView==='basket'"></basket>
 </template>
+
