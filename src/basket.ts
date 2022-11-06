@@ -8,5 +8,8 @@ export class Basket {
   }
   constructor(basketSrvs) {
     this.basketservice = basketSrvs;
+    console.log(this.basketservice.basket);
+    console.log(this.basketservice);
+   
   }
 }
