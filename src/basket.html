@@ -1,10 +1,15 @@
 <template>
     <h3>basket view</h3>
     <!-- ${basket().length} -->
-    <ul class="list-group">
+    <!-- <ul class="list-group">
         <li repeat.for="product of products" class="list-group-item">
             ${product.name}<span class="badge bg-primary rounded-pill">
                 price: ${product.price}</span>
         </li>
-    </ul>
+    </ul> -->
+    ${basket()}
+    <br>
+    <br>
+        ${basket(product.name)}
+ 
 </template>
