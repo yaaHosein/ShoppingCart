@@ -1,6 +1,5 @@
 import { BasketService } from "services/basket-service";
 import { inject } from "aurelia-framework";
-
 @inject(BasketService)
 export class Basket {
   basketservice: BasketService;

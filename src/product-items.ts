@@ -1,4 +1,4 @@
-import { BasketService } from "services/basket-service";
+import { BasketService } from "./services/basket-service";
 import { inject } from "aurelia-framework";
 
 @inject(BasketService)
