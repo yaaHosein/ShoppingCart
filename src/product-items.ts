@@ -8,6 +8,9 @@ export class ProductItems {
     console.log(this.products);
     this.basketservice = basketservice;
   }
+  addToBasket(product) {
+    this.basketservice.add(product);
+  }
   products = [
     {
       id: 1,
@@ -20,7 +23,5 @@ export class ProductItems {
       price: 33.99,
     },
   ];
-  addToBasket(product) {
-    this.basketservice.add(product);
-  }
+
 }
