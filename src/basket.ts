@@ -3,13 +3,14 @@ import { inject } from "aurelia-framework";
 @inject(BasketService)
 export class Basket {
   basketservice: BasketService;
-  basket() {
-    return this.basketservice.basket;
-  }
+  basket;
+
   constructor(basketSrvs) {
     this.basketservice = basketSrvs;
-    console.log(this.basketservice.basket);
-    console.log(this.basketservice);
-   
+    this.basket = this.basketservice.basket;
+  }
+  remove(index) {
+    this.basketservice.remove(index);
+    this.basket = this.basketservice.basket;
   }
 }

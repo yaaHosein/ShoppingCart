@@ -1,15 +1,12 @@
 <template>
     <h3>basket view</h3>
-    ${this.basket.name}
-    <!-- ${basket().length} -->
-     ${basket(this.name)}
-    <br>
-    <br>
-        ${basket(product.name)}
-        <br>
-        <br>
-        `${this.name}`
-        <br>
-        <br> 
-     
+    <div class="card-body">
+        <ul class="list-group">
+            <li repeat.for="product of basket" class="list-group-item">
+                ${product.name}<span class="badge bg-primary rounded-pill">
+                    price: ${product.price}</span>
+                <button click.trigger="remove($index)"> REMOVE</button>
+            </li>
+        </ul>
+    </div>
 </template>

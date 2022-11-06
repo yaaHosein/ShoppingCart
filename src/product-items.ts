@@ -23,5 +23,4 @@ export class ProductItems {
       price: 33.99,
     },
   ];
-
 }
