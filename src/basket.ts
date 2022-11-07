@@ -13,4 +13,8 @@ export class Basket {
     this.basketservice.remove(index);
     this.basket = this.basketservice.basket;
   }
+  removeAll() {
+    this.basketservice.removeAll();
+    this.basket = this.basketservice.basket;
+  }
 }
