@@ -5,9 +5,9 @@
             <li repeat.for="product of basket" class="list-group-item">
                 ${product.name}<span class="badge bg-primary rounded-pill">
                     price: ${product.price}</span>
-                <button click.trigger="remove($index)"> REMOVE</button>
+                <button click.trigger="remove($index)" class="badge bg-primary rounded-pill"> REMOVE</button>
             </li>
         </ul>
-        <button click.trigger="removeAll()"> REMOVE All</button>
+        <button click.trigger="removeAll()" class="badge bg-primary rounded-pill"> REMOVE All</button>
     </div>
 </template>
