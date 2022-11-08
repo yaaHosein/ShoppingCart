@@ -7,7 +7,9 @@
       <a class="navbar-brand" click.trigger="setActiveView('products')">Products</a>
       <button class="btn" type="button" click.trigger="setActiveView('basket')">
         Basket
-      </button> <span {{addToBaskett()}}></span>
+      </button>
+      ${products.length}
+      ${basket.length}
   </nav>
   <product-items if.bind="activeView==='products'"></product-items>
   <basket if.bind="activeView==='basket'"></basket>
