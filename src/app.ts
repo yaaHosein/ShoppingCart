@@ -23,5 +23,8 @@ export class Basket {
     this.basketservice = basketSrvs;
     this.basket = this.basketservice.basket;
   }
+  basketLength(product) {
+    this.basketservice.add(product);
+  }
 }
 

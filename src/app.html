@@ -8,8 +8,11 @@
       <button class="btn" type="button" click.trigger="setActiveView('basket')">
         Basket
       </button>
-      ${products.length}
+      <span {${basketLength(product)}}></span>
+      {{basketLength(product)}}
+      "{{basketLength(product)}}"
       ${basket.length}
+
   </nav>
   <product-items if.bind="activeView==='products'"></product-items>
   <basket if.bind="activeView==='basket'"></basket>
