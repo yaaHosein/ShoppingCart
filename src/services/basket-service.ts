@@ -6,7 +6,7 @@ export class BasketService {
     for (let item of this.basket) {
       total = total + item.price;
     }
-    return total;
+    return total; 
   }
 
   add(item) {
