@@ -5,8 +5,14 @@ type View = "products" | "basket";
 
 @inject(BasketService)
 export class App {
-  basketservice: BasketService;
   activeView: View = "products";
+
+  get basketLength() {
+    return this.basketService.basket.length;
+  }
+
+  constructor(private basketService: BasketService) {}
+
   setActiveView(view: View) {
     this.activeView = view;
   }

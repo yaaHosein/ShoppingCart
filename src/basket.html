@@ -1,13 +1,15 @@
 <template>
-    <h3>basket view</h3>
-    <div class="card-body">
-        <ul class="list-group">
-            <li repeat.for="product of basket" class="list-group-item">
-                ${product.name}<span class="badge bg-primary rounded-pill">
-                    price: ${product.price}</span>
-                <button click.trigger="remove($index)" class="badge bg-primary rounded-pill"> REMOVE</button>
+    <h3>Basket</h3>
+    <h5 if.bind="basketItems.length === 0">Your basket is empty</h5>
+    <div if.bind="basketItems.length > 0">
+        <ul>
+            <li repeat.for="item of basketItems">
+                name: ${item.name} <br />
+                price: ${item.price}
+                <button click.trigger="remove($index)" class="badge bg-primary rounded-pill"> Rmove</button>
             </li>
         </ul>
-        <button click.trigger="removeAll()" class="badge bg-primary rounded-pill"> REMOVE All</button>
+        <button click.trigger="removeAll()" class="badge bg-primary rounded-pill"> Remove All</button> <br />
+        Total:(${total})
     </div>
 </template>

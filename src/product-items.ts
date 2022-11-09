@@ -3,24 +3,22 @@ import { inject } from "aurelia-framework";
 
 @inject(BasketService)
 export class ProductItems {
-  basketservice: BasketService;
-  constructor(basketservice) {
-    console.log(this.products);
-    this.basketservice = basketservice;
-  }
-  addToBasket(product) {
-    this.basketservice.add(product);
-  }
   products = [
     {
       id: 1,
-      name: "foo",
+      name: "Laptop",
       price: 99.99,
     },
     {
       id: 2,
-      name: "baz",
+      name: "Camera",
       price: 33.99,
     },
   ];
+
+  constructor(private basketService: BasketService) {}
+
+  addToBasket(item) {
+    this.basketService.add(item);
+  }
 }

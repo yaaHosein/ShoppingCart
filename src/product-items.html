@@ -7,11 +7,10 @@
       </div>
       <div class="card-body">
         <ul class="list-group">
-          <li repeat.for="product of products" class="list-group-item">
-            ${product.name}<span class="badge bg-primary rounded-pill">
-              price: ${product.price}</span
-            >
-            <button click.trigger="addToBasket(product)"> Add To Basket</button>
+          <li repeat.for="item of products" class="list-group-item">
+            ${item.name}<span class="badge bg-primary rounded-pill">
+              price: ${item.price}</span>
+            <button click.trigger="addToBasket(item)"> Add To Basket</button>
           </li>
         </ul>
       </div>

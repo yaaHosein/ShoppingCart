@@ -1,12 +1,11 @@
 <template>
-
   <require from="./product-items"></require>
   <require from="./basket"></require>
   <nav class="navbar bg-light" {{$basket.length}}>
     <div class="container-fluid">
       <a class="navbar-brand" click.trigger="setActiveView('products')">Products</a>
       <button class="btn" type="button" click.trigger="setActiveView('basket')">
-        Basket
+        Basket(${basketLength})
       </button>
   </nav>
   <product-items if.bind="activeView==='products'"></product-items>
