@@ -2,19 +2,19 @@ import { BasketService } from "./services/basket-service";
 import { inject } from "aurelia-framework";
 @inject(BasketService)
 export class Basket {
-  basketservice: BasketService;
+  basketService: BasketService;
   basket;
 
   constructor(basketSrvs) {
-    this.basketservice = basketSrvs;
-    this.basket = this.basketservice.basket;
+    this.basketService = basketSrvs;
+    this.basket = this.basketService.basket;
   }
   remove(index) {
-    this.basketservice.remove(index);
-    this.basket = this.basketservice.basket;
+    this.basketService.remove(index);
+    this.basket = this.basketService.basket;
   }
   removeAll() {
-    this.basketservice.removeAll();
-    this.basket = this.basketservice.basket;
+    this.basketService.removeAll();
+    this.basket = this.basketService.basket;
   }
 }

@@ -1,9 +1,9 @@
 <template>
     <h3>Basket</h3>
-    <h5 if.bind="basketItems.length === 0">Your basket is empty</h5>
-    <div if.bind="basketItems.length > 0">
+    <h5 if.bind="basket.length === 0">Your basket is empty</h5>
+    <div if.bind="basket.length > 0">
         <ul>
-            <li repeat.for="item of basketItems">
+            <li repeat.for="item of basket">
                 name: ${item.name} <br />
                 price: ${item.price}
                 <button click.trigger="remove($index)" class="badge bg-primary rounded-pill"> Remove</button>
