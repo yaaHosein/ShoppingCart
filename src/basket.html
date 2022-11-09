@@ -6,7 +6,7 @@
             <li repeat.for="item of basketItems">
                 name: ${item.name} <br />
                 price: ${item.price}
-                <button click.trigger="remove($index)" class="badge bg-primary rounded-pill"> Rmove</button>
+                <button click.trigger="remove($index)" class="badge bg-primary rounded-pill"> Remove</button>
             </li>
         </ul>
         <button click.trigger="removeAll()" class="badge bg-primary rounded-pill"> Remove All</button> <br />

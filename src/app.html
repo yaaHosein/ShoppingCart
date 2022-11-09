@@ -1,7 +1,7 @@
 <template>
   <require from="./product-items"></require>
   <require from="./basket"></require>
-  <nav class="navbar bg-light" {{$basket.length}}>
+  <nav class="navbar bg-light">
     <div class="container-fluid">
       <a class="navbar-brand" click.trigger="setActiveView('products')">Products</a>
       <button class="btn" type="button" click.trigger="setActiveView('basket')">
