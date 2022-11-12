@@ -2,8 +2,13 @@
   <div class="container">
     <!--Content here-->
     <div class="card">
+      <div if.bind="productsStatus==='loaded'"></div>
+      <div if.bind="productsStatus==='loading'">Loading,Please wait...</div>
+      <div if.bind="productsStatus==='error'">Sorry,Something went wrong</div>
       <div class="card-header">
         <h3>Products</h3>
+        <input type="text" placeholder="search for product..." value.bind="searchFieldValue">
+        <button click.trigger="search()">Search</button>
       </div>
       <div class="card-body">
         <ul class="list-group">
