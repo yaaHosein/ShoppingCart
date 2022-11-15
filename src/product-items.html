@@ -8,14 +8,14 @@
       <div class="card-header">
         <h3>Products</h3>
         <input type="text" placeholder="search for product..." value.bind="searchFieldValue">
-        <button click.trigger="search()">Search</button>
+        <button click.trigger="search()" class="badge bg-primary rounded-pill">Search</button>
       </div>
       <div class="card-body">
         <ul class="list-group">
           <li repeat.for="item of products" class="list-group-item">
             ${item.name}<span class="badge bg-primary rounded-pill">
               price: ${item.price}</span>
-            <button click.trigger="addToBasket(item)"> Add To Basket</button>
+            <button click.trigger="addToBasket(item)" class="badge bg-primary rounded-pill"> Add To Basket</button>
           </li>
         </ul>
       </div>
