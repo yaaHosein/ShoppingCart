@@ -1,3 +1,49 @@
 <template>
+<div class="container">
     <h2>Payment</h2>
+    <form action="#" submit.trigger="onSubmit($event)">
+        <div class="mb-3">
+            <label for="firstName" class="form-label">First Name:</label>
+            <input type="text" class="form-control" id="firstName" name="firstName" />
+        </div>
+        <div class="mb-3">
+            <label for="lastName" class="form-label">Last Name:</label>
+            <input type="text" class="form-control" id="lastName" name="lastName" />
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">email:</label>
+            <input type="text" class="form-control" id="email" name="email" />
+        </div>
+        <div class="mb-3">
+            <label for="address" class="form-label">Address:</label>
+            <input type="text" class="form-control" id="address" name="address" />
+        </div>
+        <div class="mb-3">
+            <label for="lpostcode" class="form-label">Postcode:</label>
+            <input type="text" class="form-control" id="postcode" name="postcode" />
+        </div>
+        <div class="mb-3">
+            <label for="phone" class="form-label">Phone:</label>
+            <input type="text" class="form-control" id="phone" name="phone" />
+        </div>
+    
+        <div class="mb-3">
+            <label for="cardNumber" class="form-label">Card Number:</label>
+            <input type="text" class="form-control" id="cardNumber" name="cardNumber" />
+        </div>
+        <div class="mb-3">
+            <label for="cardExpiry" class="form-label">Card Expiry:</label>
+            <input type="text" class="form-control" id="cardExpiry" placeholder="mm/yy" id="name" name="cardExpiry" />
+        </div>
+        <div class="mb-3">
+            <label for="cardPin" class="form-label">Card Pin:</label>
+            <input type="text" class="form-control" id="cardPin" name="cardPin" />
+        </div>
+        <div class="mb-3">
+            <label for="nameOnCard" class="form-label">Name On Card:</label>
+            <input type="text" class="form-control" id="nameOnCard" name="nameOnCard" />
+        </div>
+        <button type="submit">send</button>
+    </form>
+    </div>
 </template>
