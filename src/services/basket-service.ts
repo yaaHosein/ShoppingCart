@@ -1,12 +1,14 @@
+import { Product } from "types/product-types";
+
 export class BasketService {
-  basket = [];
+  basket: Product[] = [];
   get totalPrice() {
     let total = 0;
 
-    for (let item of this.basket) {
+    for (const item of this.basket) {
       total = total + item.price;
     }
-    return total; 
+    return total;
   }
 
   add(item) {
@@ -17,6 +19,9 @@ export class BasketService {
   }
   removeAll() {
     // this.basket.splice(index, this.basket.length);
+    this.basket = [];
+  }
+  clear() {
     this.basket = [];
   }
 }
