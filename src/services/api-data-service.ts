@@ -1,6 +1,3 @@
-import { createDecipheriv } from "crypto";
-import { emit } from "process";
-import { json } from "stream/consumers";
 import { Product } from "types/product-types";
 
 const url = "http://localhost:9300/";
