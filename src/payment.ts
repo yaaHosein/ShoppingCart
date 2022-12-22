@@ -65,6 +65,11 @@ export class Payment {
   back() {
     this.status = "idle";
   }
+
+  detached() {
+    this.status = "idle";
+  }
+
   // this.apiDataService.makeOrder({
   //   firstName,
   //   lastName,
@@ -88,7 +93,7 @@ export class Payment {
   //   phone,
   //   cardExpiry,
   //   cardNumber,
-    //   cardPin,
-    //   nameOnCard,
-    // });
-  }
+  //   cardPin,
+  //   nameOnCard,
+  // });
+}
